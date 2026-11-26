@@ -24,6 +24,15 @@ public class MAIN {
             System.out.printf("Slope (A-B): %.2f\n", slopeAB);
         }
 
-        double distanceC = PointC.calculateDistance(PointC);
+        double distanceBC = PointC.calculateDistance(PointC);
+        double slopeBC = PointB.calculateSlope(PointC);
+                
+        System.out.printf("\nDistance (B-C): %.2f units\n", distanceBC);
+        
+        if (Double.isNaN(slopeBC)) {
+            System.out.println("Slope (B-C): Undefined");
+        } else {
+            System.out.printf("Slope (B-C): %.2f\n", slopeBC);
+        }
     }
 }
